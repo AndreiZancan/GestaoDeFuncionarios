@@ -1,0 +1,41 @@
+@model GestaoDeFuncionarios.Models.Funcionario
+
+@{
+    ViewData["Title"] = "Deletar Funcionário";
+}
+
+<h1 class="text-center my-4">Deletar Funcionário</h1>
+
+<p class="text-center text-danger  fw-bold">Tem certeza de que deseja excluir este funcionário? Esta ação não pode ser desfeita.</p>
+
+
+<hr>
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <dl class="row">
+                    <dt class="col-sm-4">Nome</dt>
+                    <dd class="col-sm-8">@Model.Nome</dd>
+
+                    <dt class="col-sm-4">Telefone</dt>
+                    <dd class="col-sm-8">@Model.Telefone</dd>
+
+                    <dt class="col-sm-4">Função</dt>
+                    <dd class="col-sm-8">@Model.Funcao</dd>
+
+                    <dt class="col-sm-4">Salário</dt>
+                    <dd class="col-sm-8">R$ @Model.Salario</dd>
+                </dl>
+
+                <form asp-action="Deletar" method="post">
+                    <div class="form-group text-center mt-4">
+                        <input type="submit" value="Deletar " class="btn btn-danger">
+                        <a asp-action="Index" class="btn btn-secondary ml-2">Cancelar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Página Inicial";
+}
+
+<div class="container mt-5">
+    <header class="text-center mb-4">
+        <h1>Bem-vindo a Gestão de Funcionários</h1>
+        <p class="lead">Gerencie suas informações de forma fácil e eficiente.</p>
+    </header>
+
+    <div class="card shadow-sm">
+        <div class="card-body text-center">
+            <h5 class="card-title">Funcionários</h5>
+            <p class="card-text">Visualize e gerencie a lista de funcionários da sua empresa.</p>
+            <a asp-action="Index" asp-controller="Funcionario" class="btn btn-primary">Ver Funcionários</a>
+        </div>
+    </div>
+</div>
